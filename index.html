@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenwood High School | Empowering Tomorrow's Leaders</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        header { background: #1e3a8a; color: #fff; padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 1.5rem; font-weight: bold; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #bfdbfe; }
+        .hero { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: #fff; text-align: center; padding: 5rem 2rem; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9; }
+        .btn { display: inline-block; background: #fff; color: #1e3a8a; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 5px; font-weight: bold; transition: transform 0.2s; }
+        .btn:hover { transform: translateY(-2px); }
+        section { padding: 4rem 2rem; }
+        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #1e3a8a; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .about-img { background: #e5e7eb; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #6b7280; font-size: 1.1rem; }
+        .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .program-card { border: 1px solid #e5e7eb; border-radius: 10px; padding: 2rem; text-align: center; transition: box-shadow 0.3s; }
+        .program-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .program-card h3 { color: #1e3a8a; margin-bottom: 1rem; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-info p { margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+        .contact-form { background: #f3f4f6; padding: 2rem; border-radius: 10px; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 5px; font-family: inherit; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #3b82f6; }
+
+        /* Contact form enhanced styling */
+        .contact-form .form-group label {
+            color: #1e3a8a;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+        .contact-form .form-group input,
+        .contact-form .form-group textarea {
+            color: #374151;
+            background: #fafafa;
+            border: 1px solid #1e3a8a;
+        }
+        .contact-form .form-group input::placeholder,
+        .contact-form .form-group textarea::placeholder {
+            color: #9ca3af;
+        }
+        .contact-form .form-group input:focus,
+        .contact-form .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+        footer { background: #1e3a8a; color: #fff; text-align: center; padding: 2rem; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .about-img { height: 200px; }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-fade-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1s; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo animate-float"><span>🏫</span> Greenwood High School</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1 class="animate-fade-up delay-1">Welcome to Greenwood High School</h1>
+            <p class="animate-fade-up delay-2">Dedicated to academic excellence, creativity, and character development since 1995.</p>
+            <a href="#programs" class="btn animate-fade-up delay-3">Explore Our Programs</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="animate-fade-up delay-1">About Our School</h2>
+            <div class="about-grid">
+                <div>
+                    <p>At Greenwood High School, we believe every student deserves a nurturing environment where they can grow academically, socially, and emotionally. Our experienced faculty and modern facilities provide the foundation for lifelong success.</p>
+                    <p>We offer a well-rounded curriculum that balances academics, arts, athletics, and technology, preparing students for the challenges of the future.</p>
+                </div>
+                <div class="about-img animate-fade-up delay-2">📚 Campus Life</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs">
+        <div class="container">
+            <h2 class="animate-fade-up delay-1">Our Programs</h2>
+            <div class="programs-grid">
+                <div class="program-card animate-fade-up delay-2">
+                    <h3>Elementary</h3>
+                    <p>Grades 1–5 focusing on core fundamentals and curiosity-driven learning.</p>
+                </div>
+                <div class="program-card animate-fade-up delay-3">
+                    <h3>Middle School</h3>
+                    <p>Grades 6–8 building critical thinking and independent study skills.</p>
+                </div>
+                <div class="program-card animate-fade-up delay-4">
+                    <h3>High School</h3>
+                    <p>Grades 9–12 with college prep, AP courses, and career guidance.</p>
+                </div>
+                <div class="program-card animate-fade-up delay-5">
+                    <h3>Arts &amp; Music</h3>
+                    <p>Visual arts, theater, band, and choir programs for all grade levels.</p>
+                </div>
+                <div class="program-card animate-fade-up delay-5">
+                    <h3>Athletics</h3>
+                    <p>Competitive sports teams including soccer, basketball, and track.</p>
+                </div>
+                <div class="program-card animate-fade-up delay-5">
+                    <h3>STEM Lab</h3>
+                    <p>Robotics, coding, and science labs to inspire future innovators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background: #f3f4f6;">
+        <div class="container">
+            <h2 class="animate-fade-up delay-1">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p><strong>📍 Address:</strong> 123 Learning Lane, Education City, ST 54321</p>
+                    <p><strong>📞 Phone:</strong> (555) 123-4567</p>
+                    <p><strong>✉️ Email:</strong> info@greenwoodhigh.edu</p>
+                    <p><strong>🕒 Hours:</strong> Mon–Fri, 7:30 AM – 4:00 PM</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="background:#1e3a8a; color:#fff; border:none; cursor:pointer;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Greenwood High School. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

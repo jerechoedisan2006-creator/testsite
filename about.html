@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Greenwood High School</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        header { background: #1e3a8a; color: #fff; padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 1.5rem; font-weight: bold; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #bfdbfe; }
+        .hero { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: #fff; text-align: center; padding: 4rem 2rem; }
+        .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        .hero p { font-size: 1.25rem; opacity: 0.9; }
+        section { padding: 4rem 2rem; }
+        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #1e3a8a; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+        .card { background: #f3f4f6; border-radius: 10px; padding: 2rem; margin-bottom: 2rem; }
+        .card h3 { color: #1e3a8a; margin-bottom: 1rem; }
+        .quick-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .fact { background: #e5e7eb; border-radius: 10px; padding: 1.5rem; text-align: center; }
+        .fact .num { font-size: 2rem; font-weight: bold; color: #1e3a8a; display: block; }
+        footer { background: #1e3a8a; color: #fff; text-align: center; padding: 2rem; }
+        .back-link { text-align: center; margin: 2rem 0; }
+        .back-link a { color: #3b82f6; text-decoration: none; font-weight: 500; }
+        .back-link a:hover { text-decoration: underline; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-fade-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+        .delay-5 { animation-delay: 1s; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo animate-float"><span>🏫</span> Greenwood High School</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" style="color: #bfdbfe;">About Us</a></li>
+                    <li><a href="index.html#programs">Programs</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="animate-fade-up delay-1">About Us</h1>
+            <p class="animate-fade-up delay-2">Learn more about our story, mission, and the people who make Greenwood High School special.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Our Story</h2>
+            <div class="grid-2">
+                <div>
+                    <p>Founded in 1995, Greenwood High School began with a simple vision: to create a school where every student is known, valued, and challenged to reach their full potential. What started with just 47 students in a single building has grown into a thriving community of over 1,200 learners.</p>
+                    <p>Over nearly three decades, we've remained committed to academic excellence, character development, and innovation in education. Our graduates go on to top universities, rewarding careers, and meaningful lives of service.</p>
+                </div>
+                <div class="card">
+                    <h3>Quick Facts</h3>
+                    <div class="quick-facts">
+                        <div class="fact"><span class="num">1995</span>Founded</div>
+                        <div class="fact"><span class="num">1,200+</span>Students</div>
+                        <div class="fact"><span class="num">100+</span>Faculty &amp; Staff</div>
+                        <div class="fact"><span class="num">15:1</span>Student Ratio</div>
+                        <div class="fact"><span class="num">98%</span>Graduation Rate</div>
+                        <div class="fact"><span class="num">25+</span>AP Courses</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #f3f4f6;">
+        <div class="container">
+            <h2>Mission &amp; Values</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Our Mission</h3>
+                    <p>To empower every student to become a confident, compassionate, and capable leader through rigorous academics, meaningful relationships, and real-world learning experiences.</p>
+                </div>
+                <div class="card">
+                    <h3>Core Values</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><strong>Excellence:</strong> We strive for the highest standards in all we do.</li>
+                        <li style="margin-bottom: 1rem;"><strong>Integrity:</strong> We act with honesty and honor.</li>
+                        <li style="margin-bottom: 1rem;"><strong>Respect:</strong> We honor the dignity of every individual.</li>
+                        <li style="margin-bottom: 1rem;"><strong>Community:</strong> We build strong, supportive relationships.</li>
+                        <li style="margin-bottom: 1rem;"><strong>Innovation:</strong> We embrace creativity and new ideas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Our Facilities</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Modern Classrooms</h3>
+                    <p>Every classroom is equipped with smart boards, high-speed internet, and flexible furniture to support collaborative learning.</p>
+                </div>
+                <div class="card">
+                    <h3>STEM Laboratory</h3>
+                    <p>Our state-of-the-art science and technology lab supports robotics, coding, chemistry, and physics experiments.</p>
+                </div>
+                <div class="card">
+                    <h3>Library &amp; Media Center</h3>
+                    <p>A quiet, welcoming space with thousands of books, digital resources, and research support for all grade levels.</p>
+                </div>
+                <div class="card">
+                    <h3>Athletics Complex</h3>
+                    <p>Gymnasium, soccer field, basketball courts, and track support our competitive and recreational sports programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Meet Our Leadership</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Dr. Sarah Martinez</h3>
+                    <p><strong>Principal</strong></p>
+                    <p>Dr. Martinez has served Greenwood High School for 18 years, first as a teacher and now as principal. She holds a doctorate in Educational Leadership.</p>
+                </div>
+                <div class="card">
+                    <h3>Mr. James Chen</h3>
+                    <p><strong>Vice Principal</strong></p>
+                    <p>Mr. Chen oversees student affairs and curriculum development. He brings 15 years of classroom experience to his role.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-link">
+        <a href="index.html">← Return to Homepage</a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Greenwood High School. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
